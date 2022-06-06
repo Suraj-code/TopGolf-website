@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <body onload="load()">
+    <header>
+      <div id="menuToggler">&#8801;</div>
+      <nav id="menu">
+        <a href="https://adventuregolf.com/leicester/adventure-golf">Golf & prices</a>
+        <a href="rules.html">Rules</a>
+        <a href="https://adventuregolf.com/leicester/covid-19">Covid-19</a>
+        <a href="index.html">
+          <div class="navHeading"></div>
+        </a>
+        <a href="score.html">Scores</a>
+        <a href="https://gifts.adventuregolf.com/shop/treetop-adventure-golf-gift-voucher">Gift Vouchers</a>
+        <a href="https://adventuregolf.com/leicester/faqs">FAQs</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>Forms</h1>
+        <form id="playerNames">
+          <h2>Players:</h2>
+          <label for="playerOne">Player 1: </label>
+          <input type="text" id="playerOne" name="Player 1" placeholder="enter your name" required>
+          <label for="playerTwo">Player 2: </label>
+          <input type="text" id="playerTwo" name="Player 2" placeholder="enter your name" required>
+          <label for="playerThree">Player 3: </label>
+          <input type="text" id="playerThree" name="Player 3" placeholder="enter your name">
+          <label for="playerFour">Player 4: </label>
+          <input type="text" id="playerFour" name="Player 4" placeholder="enter your name">
+          <input type="submit"  value="Start">
+        </form>
+      </section>
+
+      <table id="optTable">
+        <thead>
+          <tr>
+            <th>Players</th>
+            <th>
+              <select id="tableOption" class="tableFilter" onchange="opt1()"></select>
+            </th>
+          </tr>
+        </thead>
+      </table>
+
+      <section id="scoreTbl">
+        <h2>Tables</h2>
+        <table id="num1">
+          <tbody>
+            <tr>
+              <td>Hole 1</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 2</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 3</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 4</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 5</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 6</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 7</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 8</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 9</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>HALF-WAY</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Hole 10</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 11</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 12</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 13</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 14</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 15</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 16</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 17</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 18</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table id="num2">
+          <tbody>
+            <tr>
+              <td>Hole 1</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 2</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 3</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 4</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 5</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 6</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 7</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 8</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 9</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>HALF-WAY</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Hole 10</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 11</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 12</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 13</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 14</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 15</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 16</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 17</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 18</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table id="num3" >
+          <tbody>
+            <tr>
+              <td>Hole 1</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 2</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 3</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 4</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 5</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 6</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 7</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 8</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 9</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>HALF-WAY</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Hole 10</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 11</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 12</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 13</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 14</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 15</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 16</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 17</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 18</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table id="num4">
+          <tbody>
+            <tr>
+              <td>Hole 1</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 2</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 3</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 4</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 5</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 6</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 7</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 8</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 9</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>HALF-WAY</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Hole 10</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 11</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 12</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 13</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 14</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 15</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 16</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 17</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+            <tr>
+              <td>Hole 18</td>
+              <td><input class="playerScore" type="number" min = '1' max="6" onchange="saveToStorage()"></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <div class="btnwin">
+        <a id="scorebtn" href="results.html">WHO'S WON?</a>
+      </div>
+
+    </main>
+    <script src="js/score.js"></script>
+  </body>
+</html>
